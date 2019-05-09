@@ -1,6 +1,21 @@
-let a = 0.0; let inc = TWO_PI / 25.0;
-for (let i = 0; i < 25; i++) {
-  //line(i * 4, 50, i * 4, 50 + sin(a) * 40.0);
-  console.log(a);
-  a = a + inc;
+let x = 1;
+let y = 1;
+let easing = 0.05;
+
+function setup() {
+  createCanvas(720, 400);
+  noStroke();
+}
+
+function draw() {
+  background(237, 34, 93);
+  let targetX = mouseX;
+  let dx = targetX - x;
+  x += dx * easing;
+
+  let targetY = mouseY;
+  let dy = targetY - y;
+  y += dy * easing;
+
+  ellipse(x, y, 66, 66);
 }
