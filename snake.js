@@ -5,7 +5,8 @@ let boxSize = 20;
 
 function setup() {
    frameRate(10);                                        
-   createCanvas(300, 200);                                   //noStroke();
+   createCanvas(300, 200); 
+   //noStroke();
 
    drawGrid();
 
